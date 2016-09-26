@@ -1,5 +1,5 @@
+from ..app.controllers import root_controller
+
 def routes(app):
     
-    @app.route('/')
-    def index():
-        return 'Hello world!'
+    app.route('/')(root_controller.index)
