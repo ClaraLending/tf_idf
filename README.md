@@ -14,3 +14,4 @@
 ## Development
 
 1. Run `rake test`. Make the tests pass!
+2. Run `python3 -m tf_idf.main` to run the webserver to see results.
