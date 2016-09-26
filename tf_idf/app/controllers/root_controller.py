@@ -1,2 +1,6 @@
 def index():
-    return 'Hello world!'
+    return '''
+        <ul>
+            <li><a href="/calculations">Exercise #1: Calculations</a></li>
+        </ul>
+    '''
