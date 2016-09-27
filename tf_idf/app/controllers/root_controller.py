@@ -1,6 +1,8 @@
-def index():
-    return '''
-        <ul>
-            <li><a href="/calculations">Exercise #1: Calculations</a></li>
-        </ul>
-    '''
+class RootController:
+
+    def index(self):
+        return '''
+            <ul>
+                <li><a href="/calculations">Exercise #1: Calculations</a></li>
+            </ul>
+        '''
