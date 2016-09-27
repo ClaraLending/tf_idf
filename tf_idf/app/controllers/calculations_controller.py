@@ -1,4 +1,4 @@
-class CalculationsController:
+class CalculationsController(object):
 
     def __init__(self, corpus):
         self._corpus = corpus

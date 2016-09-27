@@ -1,4 +1,4 @@
-class RootController:
+class RootController(object):
 
     def index(self):
         return '''

@@ -9,7 +9,12 @@
     3. Click `Create Workspace`.
 3. If necessary, open the workspace.
 4. Prepare the Cloud9 virtual machine.
-    1. `pip3 install -r requirements.txt`
+    1. `sudo pip3 install -r requirements.txt`
+    2. Download the NLTK sample corpora.
+        1. `python3`
+        2. `import nltk`
+        3. `nltk.download()`
+        4. Exit the Python interpreter (press `Ctrl-D`).
 
 ## Development
 
