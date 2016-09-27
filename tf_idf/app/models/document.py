@@ -1,3 +1,6 @@
+import collections
+
+
 class Document(object):
     
     def __init__(self, title, words):
@@ -11,6 +14,10 @@ class Document(object):
         # hint: use the collections.Counter class
         # self._word_count should be the total number of words
         # self._words should be a dict mapping each word to a DocumentWordStatistics object
+        counter = collections.Counter(words)
+        for word, word_count in counter.items():
+            self._words[word] = DocumentWordStatistics(word_count, self)
+            self._word_count += word_count
 
     @property
     def title(self):
