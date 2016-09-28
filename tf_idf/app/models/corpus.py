@@ -8,12 +8,11 @@ from .document import Document
 class Corpus(object):
     
     def __init__(self, documents):
-        documents = {}
+        self._documents = {}
         for title, words in documents.items():
             document = Document(title, words)
-            documents[title] = document
-        self._documents = documents
-        
+            self._documents[title] = document
+
         self._words = {}
 
         # @TODO:
