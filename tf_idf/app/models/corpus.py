@@ -51,9 +51,12 @@ class CorpusWordStatistics(object):
     def idf_boolean(self):
         return math.log(len(self._corpus.documents) / (1 + self._document_count))
     
-    @property
     def tf_idf_linear_boolean(self, document_title):
-        return self._corpus.documents[document_title].words[self._word].tf_linear * self.idf_boolean
+        document_statistics = self._corpus.documents[document_title]
+        if self._word in document_statistics.words:
+            return document_statistics.words[self._word].tf_linear * self.idf_boolean
+        else:
+            return 0
 
 
 class NLTKGutenbergCorpus(Corpus):
