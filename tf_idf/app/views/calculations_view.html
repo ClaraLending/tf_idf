@@ -1,0 +1,13 @@
+<ul>
+    {% for word in corpus.words %}
+    <li>
+        <span>{{ word }}</span>
+        <ul>
+            {% for document in corpus.documents %}
+            <span>{{ document }}</span>
+            <span>{{ corpus.words[word].tf_idf_linear_boolean(document) }}</span>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>

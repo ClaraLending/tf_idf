@@ -7,7 +7,7 @@ from .config.routes import routes
 
 corpus = NLTKGutenbergCorpus()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app', 'views'))
 routes(app, corpus)
 
 if __name__ == '__main__':
