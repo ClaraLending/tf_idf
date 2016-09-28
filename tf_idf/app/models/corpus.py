@@ -20,13 +20,13 @@ class Corpus(object):
         # hint: use the collections.Counter class
         # self._words should be a dict mapping each word to a CorpusWordStatistics object
         words = set()
-        for document_title, document in documents.items():
+        for document_title, document in self._documents.items():
             for word in document.words:
                 words.add(word)
         for word in words:
             document_count = 0
-            for document_title, document in documents.items():
-                if document.words[word].count > 0:
+            for document_title, document in self._documents.items():
+                if word in document.words:
                     document_count += 1
             statistics = CorpusWordStatistics(word, document_count, self)
             self._words[word] = statistics
@@ -62,5 +62,4 @@ class NLTKGutenbergCorpus(Corpus):
         documents = {}
         for title in nltk_gutenberg_corpus.fileids():
             documents[title] = nltk_gutenberg_corpus.words(title)
-            print(documents[title])
         super().__init__(documents)
