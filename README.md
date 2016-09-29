@@ -14,9 +14,9 @@
         1. `python3`
         2. `import nltk`
         3. `nltk.download()`
-        4. Exit the Python interpreter (press `Ctrl-D`).
+        4. Download the `gutenberg` corpus.
+        5. Exit the Python interpreter (press `Ctrl-D`).
 
 ## Development
 
-1. Run `rake test`. Make the tests pass!
-2. Run `python3 -m tf_idf.main` to run the webserver to see results.
+1. Run `python3 -m tf_idf.main` to run the webserver to see results.
