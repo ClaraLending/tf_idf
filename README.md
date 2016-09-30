@@ -1,3 +1,7 @@
+# Quick Links
+  * [NLTK](http://www.nltk.org/install.html)
+  * [Gutenberg](https://pypi.python.org/pypi/Gutenberg)
+
 # Term Frequency - Inverse Document Frequency: Practice Repo
 
 ## Setup
